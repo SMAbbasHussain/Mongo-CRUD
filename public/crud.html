@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD Operations</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Product Manager</h1>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <form id="productForm">
+        <h2>Add/Update Product</h2>
+        <input type="hidden" id="productId" />
+        <div class="form-group">
+          <label for="productName">Product Name</label>
+          <input type="text" id="productName" placeholder="Enter product name" required />
+        </div>
+        <div class="form-group">
+          <label for="productPrice">Product Price</label>
+          <input type="number" id="productPrice" placeholder="Enter product price" required />
+        </div>
+        <button type="submit" class="btn-primary">Add/Update</button>
+      </form>
+
+      <form id="searchForm" class="search-form">
+        <h2>Search Product</h2>
+        <div class="form-group">
+          <label for="searchQuery">Search by Name</label>
+          <input type="text" id="searchQuery" placeholder="Enter product name" required />
+        </div>
+        <button type="submit" class="btn-secondary">Search</button>
+      </form>
+      <div id="searchResult"></div>
+    </section>
+
+    <section class="table-section">
+      <h2>Product List</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="productList">
+          <!-- Products will be dynamically inserted here -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Product Manager. All rights reserved.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
